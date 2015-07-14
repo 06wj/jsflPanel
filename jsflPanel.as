@@ -8,6 +8,7 @@
     import flash.external.ExternalInterface;
     import fl.controls.TextInput;
     import fl.controls.TextArea;
+    import flash.text.TextFormat;
 
     public class jsflPanel extends Sprite {
         public function jsflPanel() {
@@ -21,6 +22,7 @@
         private function init(e: Event = null): void {
             stage.scaleMode = StageScaleMode.NO_SCALE;
             var textPanel = this.textPanel;
+            textPanel.setStyle("textFormat", new TextFormat(null, null, 0xffffff));
             this.runBtn.addEventListener(MouseEvent.CLICK, function (e: MouseEvent): void {
                 var toolCode = [
                     'var log = function(text){fl.trace(text);};',
@@ -33,7 +35,7 @@
                     '        var elems = fl.elems = frames[0].elements;',
                     '        fl.elem = elems[0];',
                     '   }',
-                    '    window.lib = fl.doc.library;',
+                    '   window.lib = fl.doc.library;',
                     '}'
                 ].join('');
                 MMExecute(toolCode + textPanel.text);

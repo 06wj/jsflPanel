@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<macromedia-extension
+name="jsflPanel"
+version="1.0.0"
+type="command"
+id="com.06wj.jsflPanel"
+>
+<author name="06wj" />
+<products>
+<product name="Flash" version="12" primary="true" />
+</products>
+<description>
+<![CDATA[
+This extension can run jsfl command
+]]>
+</description>
+<ui-access>
+<![CDATA[
+Hia~
+]]>
+</ui-access>
+<license-agreement>
+<![CDATA[
+]]>
+</license-agreement>
+<files>
+<file source="jsflPanel.swf" destination="$flash/WindowSWF" />
+</files>
+</macromedia-extension>
